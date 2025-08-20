@@ -10,7 +10,7 @@ import java.util.Map;
  *
  * @author MiKaSan
  * @since 2025/8/20 16:36
- * @Description : 流量安全威胁报告
+ *  流量安全威胁报告
  */
 public class ResourceReports {
     @Property
