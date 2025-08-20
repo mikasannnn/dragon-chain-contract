@@ -1,6 +1,9 @@
 package com.mikasan.pojo;
 
+import lombok.Data;
 import lombok.Getter;
+import lombok.experimental.Accessors;
+import org.hyperledger.fabric.contract.annotation.DataType;
 import org.hyperledger.fabric.contract.annotation.Property;
 
 import java.security.Timestamp;
@@ -13,8 +16,10 @@ import java.util.Map;
  * @since 2025/8/20 16:36
  *  流量安全威胁报告
  */
+@Data
+@DataType
+@Accessors(chain = true)
 public class ResourceReports {
-    @Getter
     @Property
     String id;
 

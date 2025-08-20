@@ -21,7 +21,6 @@ import java.util.Map;
 @Accessors(chain = true)
 public class TrafficReports {
 
-    @Getter
     @Property
     String id;
 
