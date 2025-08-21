@@ -1,12 +1,11 @@
 package com.mikasan.pojo;
 
 import lombok.Data;
-import lombok.Getter;
 import lombok.experimental.Accessors;
 import org.hyperledger.fabric.contract.annotation.DataType;
 import org.hyperledger.fabric.contract.annotation.Property;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 import java.util.Map;
 
 /**

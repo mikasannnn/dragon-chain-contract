@@ -44,7 +44,7 @@ public class ContractMethod {
 
         if (reportJson == null || reportJson.isEmpty()) {
             log.warning("ID: " + id + " 未查询到数据");
-            return "{ }";
+            return "{}";
         }
 
         log.info("查询成功: " + id);

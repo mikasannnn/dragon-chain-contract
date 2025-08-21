@@ -1,8 +1,6 @@
 package com.mikasan;
 
 import com.google.gson.Gson;
-import com.mikasan.pojo.ResourceReports;
-import com.mikasan.pojo.TrafficReports;
 import lombok.extern.java.Log;
 import org.hyperledger.fabric.contract.Context;
 import org.hyperledger.fabric.contract.annotation.Contract;
