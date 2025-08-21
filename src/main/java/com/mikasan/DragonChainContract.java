@@ -48,8 +48,8 @@ public class DragonChainContract {
     
     // 添加流量报告
     @Transaction
-    public void addTrafficReport(Context ctx, TrafficReports reports) {
-        ContractMethod.addTrafficReport(ctx, reports);
+    public void addTrafficReport(Context ctx, String  json) {
+        ContractMethod.addTrafficReport(ctx, json);
     }
 
     // 获取单个流量报告

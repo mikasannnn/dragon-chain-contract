@@ -6,6 +6,7 @@ import com.mikasan.pojo.ResourceReports;
 import com.mikasan.pojo.TrafficReports;
 import lombok.extern.java.Log;
 import org.hyperledger.fabric.contract.Context;
+import org.hyperledger.fabric.contract.annotation.Transaction;
 import org.hyperledger.fabric.shim.ChaincodeStub;
 import org.hyperledger.fabric.shim.ledger.QueryResultsIterator;
 import org.hyperledger.fabric.shim.ledger.KeyValue;
@@ -27,6 +28,7 @@ public class ContractMethod {
     private static final Gson gson = new Gson();
 
     //添加
+    @Transaction
     public static void addResourceReport(Context ctx, String json) {
         ResourceReports reports = gson.fromJson(json, ResourceReports.class);
         ChaincodeStub stub = ctx.getStub();
@@ -35,6 +37,7 @@ public class ContractMethod {
     }
 
     //获取单个
+    @Transaction
     public static String getResourceReport(Context ctx, String id) {
         ChaincodeStub stub = ctx.getStub();
         String reportJson = stub.getStringState(id);
@@ -49,6 +52,7 @@ public class ContractMethod {
     }
 
     //获取所有
+    @Transaction
     public static String getAllResourceReport(Context ctx) {
         ChaincodeStub stub = ctx.getStub();
         List<ResourceReports> reportsList = new ArrayList<>();
@@ -65,13 +69,16 @@ public class ContractMethod {
     }
     
     // 添加流量报告
-    public static void addTrafficReport(Context ctx, TrafficReports reports) {
+    @Transaction
+    public static void addTrafficReport(Context ctx, String json ){
+        TrafficReports reports = gson.fromJson(json, TrafficReports.class);
         ChaincodeStub stub = ctx.getStub();
         stub.putStringState(reports.getId(), gson.toJson(reports));
         log.info(reports.getId() + "\n添加成功");
     }
 
     // 获取单个流量报告
+    @Transaction
     public static String getTrafficReport(Context ctx, String id) {
         ChaincodeStub stub = ctx.getStub();
         String reportJson = stub.getStringState(id);
@@ -86,6 +93,7 @@ public class ContractMethod {
     }
 
     // 获取所有流量报告
+    @Transaction
     public static String getAllTrafficReports(Context ctx) {
         ChaincodeStub stub = ctx.getStub();
         List<TrafficReports> reportsList = new ArrayList<>();

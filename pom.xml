@@ -57,6 +57,12 @@
 			<groupId>org.hyperledger.fabric-chaincode-java</groupId>
 			<artifactId>fabric-chaincode-shim</artifactId>
 			<version>2.4.1</version>
+			<exclusions>
+			<exclusion>
+				<groupId>com.github.everit-org.json-schema</groupId>
+				<artifactId>org.everit.json.schema</artifactId>
+			</exclusion>
+			</exclusions>
 		</dependency>
 
 		<!-- 它通过注解自动生成样板代码（如 getter、setter、构造函数等），从而简化了 Java 代码的编写。 -->
