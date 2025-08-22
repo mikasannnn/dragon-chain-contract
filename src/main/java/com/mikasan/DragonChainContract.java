@@ -15,7 +15,7 @@ import org.hyperledger.fabric.contract.annotation.Transaction;
  * @since 2025/8/20 16:39
  */
 
-@Contract(name = "DragonChainContract")  //指定合约名
+//@Contract(name = "DragonChainContract")  //指定合约名
 @Default//默认是智能合约
 @Log
 public class DragonChainContract {
