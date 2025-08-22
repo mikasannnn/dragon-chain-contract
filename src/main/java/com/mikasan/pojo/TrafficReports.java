@@ -5,7 +5,7 @@ import lombok.experimental.Accessors;
 import org.hyperledger.fabric.contract.annotation.DataType;
 import org.hyperledger.fabric.contract.annotation.Property;
 
-import java.security.Timestamp;
+
 import java.util.Map;
 
 /**
@@ -36,5 +36,5 @@ public class TrafficReports {
     Map<String,String> details;
 
     @Property
-    Timestamp reportTime;
+    long reportTime;
 }

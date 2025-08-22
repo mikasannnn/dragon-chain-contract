@@ -5,7 +5,6 @@ import lombok.experimental.Accessors;
 import org.hyperledger.fabric.contract.annotation.DataType;
 import org.hyperledger.fabric.contract.annotation.Property;
 
-import java.sql.Timestamp;
 import java.util.Map;
 
 /**
@@ -35,6 +34,6 @@ public class ResourceReports {
     Map<String,String> details;
 
     @Property
-    Timestamp reportTime;
+    long reportTime;
 
 }
