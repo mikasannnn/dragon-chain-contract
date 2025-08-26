@@ -31,9 +31,9 @@ public class ResourceReports {
     String content;
 
     @Property
-    Map<String,String> details;
+    String reportStatus;
 
     @Property
-    long reportTime;
+    String reportTime;
 
 }

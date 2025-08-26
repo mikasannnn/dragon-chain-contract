@@ -33,8 +33,5 @@ public class TrafficReports {
     String content;
 
     @Property
-    Map<String,String> details;
-
-    @Property
-    long reportTime;
+    String reportTime;
 }

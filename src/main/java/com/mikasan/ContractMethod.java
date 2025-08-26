@@ -2,6 +2,7 @@ package com.mikasan;
 
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.mikasan.pojo.ResourceReports;
 import com.mikasan.pojo.TrafficReports;
 import lombok.extern.java.Log;
@@ -13,6 +14,7 @@ import org.hyperledger.fabric.shim.ledger.KeyValue;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * ContractMethod
@@ -67,7 +69,7 @@ public class ContractMethod {
         log.info("查询所有数据成功，共 " + reportsList.size() + " 条");
         return gson.toJson(reportsList);
     }
-    
+
     // 添加流量报告
     @Transaction
     public static void addTrafficReport(Context ctx, String json ){
